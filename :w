@@ -1,0 +1,71 @@
+\section{Prime Time : Counting Primes }
+
+Once the Riemann Zeros and their Relative symmetries have been identified. We follow the simple process for symmetrical and anti-symmetrical Riemann zeros : 
+For symmetrical Riemann Zeros, we fetch the integral part of the Riemann Zeros and 10 decimal digits for a total of twelve digits excluding the decimal point.
+My point of reference is the \href{http://www.dtc.umn.edu/~Odlyzko/zeta_tables/zeros2}{link}.
+For N = 4251161764252561 \\
+Stack is, \\
+4251161764252561\\
+1652524671611524\\
+Symmetrical Zeros : \\
+25 and 65\\
+52 and 56\\
+Asymmetrical Zeros:\\
+52 and 65\\
+25 and 56\\
+For symmetry,\\
+including the decimal digits\\
+25.010857580 (rounded off to 9 decimal digits) \\
+65.112544048 (rounded off to 9 decimal digits) \\
+Primes: 11, 02, 47, 05 \\
+Number of Primes: 4\\
+\\
+And \\
+\\
+52.970321478 (rounded off to 9 decimal digits) \\
+56.446247697 (rounded off to 9 decimal digits) \\
+Primes: 47, 23, 17, 71, 79, 97 \\
+Number of Primes: 6\\
+\\
+For cross or anti-symmetry,\\
+Originial Zero:\\
+25.010857580\\
+Inferred Zero:(inferred from 1st and 10th unrounded digit\\
+21.022039639 (after round off)\\
+Primes: 02, 53, 79, 97, 83 \\
+Number of Primes: 5 \\
+\\
+Original Zero:\\
+65.112544048\\
+Inferred Zero:\\
+60.831778525\\
+Primes: 05, 13, 31, 47\\
+Number of Primes: 4\\
+\\
+Cross-Symmetry \#2 :\\
+Original Zero:\\
+52.970321478\\
+Inferred Zero:\\
+75.704690699\\
+\\
+Original Zero:\\
+56.446247697\\
+Inferred Zero: (If 10th digit is zero, the inferred zero is the zero itself)\\
+56.446247697\\
+Primes: NIL\\
+Number of Primes: 0\\
+This completes the anlysis of prime numbers in the retrieved Riemann zeros (upto 10 decimal places). With the Riemann zeros being in the range from 14 to 98.
+
+So to summarize the yield from the Prime Number Counting Step:\\
+
+
+
+Iteration 1 (without rotation):\\
+From Symmetry: \\
+Number of Primes: 4\\
+Number of Primes: 6\\
+From Cross Symmetry:\\
+Number of Primes: 5\\
+Number of Primes: 4\\
+Number of Primes: 0\\
+
