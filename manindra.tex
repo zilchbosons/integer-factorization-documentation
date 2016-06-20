@@ -1,5 +1,27 @@
 \section{Dr. Manindra Agrawal, IIT Kanpur 101 digit challenge vector}
 
+For those who have scarcity of time in going through the computation steps:
+To summarize, 
+computation is performed in 2 simple steps,
+In first step, 3 components are fetched,
+Input or in other words , digits from the number to be factorized.
+For symmetry, input digits are fetched from front (scanning left to right).
+For anti-symmetry, input digits are fetched from rear (scanning right to left).
+
+2nd component is the Prime count itself from the previous step of the overall compuational process.
+
+3rd component is/are the digit(s) from PI or E depending on whether it is even (PI-centric) or odd (E-centric).
+
+Once the above info is ready we check for similar steps down the line, read: symmetry for current symmetry and anti-symmetry for current anti-symmetry.
+
+If a similar step is there down the line (next step), we club it with the current after performing the substitutions mentioned above.
+
+The second half of the computation involves e/pi lookups. Generally, PI lookup of the concatenation of e/pi digit + Prime count + input suffices in most cases .
+But E-lookup is also required when we are combining symmmetries/anti-symmtries of the same type as above.
+Once the lookup is available, we perform further e/pi lookups where necessary for pi/e information as calculated above.
+Very difficult to explain and follow here. I am writing C++ code for the same (decoding step) and that should make it crystal clear.
+Code available at (almost done, in printFactors API) : https://bitbucket.org/zilchbosons/intfact-riemann
+
 Now Solving Dr. Manindra Agarwal\'s 101 digit vector:\\
 Reproducing the computer output as it is here:\\
 
@@ -14,26 +36,135 @@ Symmetry #1
 
  2-way Primes: 	7
 
+Computation Start ***************
+
+3 { Input }
+7 { Prime Count }
+2 { e-sequence }
+
+\end {verbatim}
+\Pi[273] = 4 \\
+E[4] = 2 \\
+Indeed one of the factors starts with 2. \\
+\begin {verbatim}
+Computation End *****************
+
 Cross Symmetry #2
 
  2-way Primes: 	6
+
+Computation Start ********
+
+5 { Input : 2nd last digit }
+6 { Prime Count }
+2 { e-sequence } 
+
+\end{verbatim}
+\Pi[265] = 3 \\
+E[3] = 8 \\
+So the factor so far is { 28 }
+\begin{verbatim}
+Computation End *********
 
 Symmetry #2
 
  2-way Primes: 	7
 
+Computation Start *********
+
+4 {  Input : 3rd digit }
+7 { Prime Count }
+7 { 100th  digit of e-sequence,from behind as this is symmetry of type 2 }
+
+Above to be clubbed with next symmetry condition...
+
+Computation End **********
 Symmetry #1
 
  2-way Primes: 	7
+
+Computation Start ******
+
+4 { Input : 4th digit }
+7 { Prime Count }
+8 { 3rd digit of e-sequence, symmetry of type 1 }
+
+Last two, summarised,
+
+44 { Input }
+77 { Prime Count }
+78 { e -seq }
+\end {verbatim}
+\Pi[774] = 8 \\ 
+\Pi[874] = 5 \\
+E[58] = 9\\
+\Pi[85] = 0\\
+So the factor so far is { 2809 }
+
+\begin{verbatim}
+Computation End ********
 
 Cross Symmetry #1
 
  2-way Primes: 	4
 
+Computation Start *****
+
+4 { From behind, Input , 5th digit from last }
+4 { Prime count }
+2 { e-seq , 4 digit }
+
+clubbing it with next anti-symmetry
+\begin {verbatim}
+
+Computation End ****
 Cross Symmetry #1
 
  2-way Primes: 	5
 
+Computation Start ******
+
+3 { Input 6th digit from last , type 1 cross sym }
+5 { Prime Count }
+6 { 94th digit of e-seq }
+
+Summarizing,  from previous anti-sym,
+43 {Input}
+45 { Prime Count }
+26 { e-seq }
+\end{verbatim}
+\Pi[244] = 2 \\
+\Pi[653] = 6 \\
+E[442] = 0 \\
+E[356] = 1 \\
+E[20] = 6 \\
+E[61] = 6 \\
+Factor so far { 280966 } \\
+\begin{verbatim}
+To summarize, 
+computation is performed in 2 simple steps,
+In first step, 3 components are fetched,
+Input or in other words , digits from the number to be factorized.
+For symmetry, input digits are fetched from front (scanning left to right).
+For anti-symmetry, input digits are fetched from rear (scanning right to left).
+
+2nd component is the Prime count itself from the previous step of the overall compuational process.
+
+3rd component is/are the digit(s) from PI or E depending on whether it is even (PI-centric) or odd (E-centric).
+
+Once the above info is ready we check for similar steps down the line, read: symmetry for current symmetry and anti-symmetry for current anti-symmetry.
+
+If a similar step is there down the line (next step), we club it with the current after performing the substitutions mentioned above.
+
+The second half of the computation involves e/pi lookups. Generally, PI lookup of the concatenation of e/pi digit + Prime count + input suffices in most cases .
+But E-lookup is also required when we are combining symmmetries/anti-symmtries of the same type as above.
+Once the lookup is available, we perform further e/pi lookups where necessary for pi/e information as calculated above.
+Very difficult to explain and follow here. I am writing C++ code for the same (decoding step) and that should make it crystal clear.
+Code available at (almost done, in printFactors API) : https://bitbucket.org/zilchbosons/intfact-riemann
+
+
+
+Computation End ******
 Symmetry #2
 
  2-way Primes: 	7
