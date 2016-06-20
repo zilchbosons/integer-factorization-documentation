@@ -4,13 +4,22 @@
 \usepackage{alltt}
 \usepackage{amsmath}
 \usepackage{hyperref}
-%\usepackage{titlesec}
+\usepackage{lipsum}
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
 \begin{document}
-%\titleformat{\subsection}[runin]{}{}{}{}[]
 \maketitle
+\begin{absolutelynopagebreak}
 \include{abstract}
 \include{input}
+\end{absolutelynopagebreak}
+\begin{absolutelynopagebreak}
 \include{riemannsymmetry}
+\end{absolutelynopagebreak}
 \include{primetime}
 \include{epic}
 \end{document}
