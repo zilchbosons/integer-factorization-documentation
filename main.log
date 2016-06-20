@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=latex 2016.5.17)  20 JUN 2016 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=latex 2016.5.17)  20 JUN 2016 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,7 +23,7 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(./main.aux (./abstract.aux))
+(./main.aux (./abstract.aux) (./input.aux) (./riemannsymmetry.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -47,7 +47,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 \openout2 = `abstract.aux'.
 
- (./abstract.tex
+
+(./abstract.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -56,15 +57,36 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
 ) [2
 
-] (./main.aux
-(./abstract.aux)) ) 
+]
+\openout2 = `input.aux'.
+
+ (./input.tex) [3
+
+
+]
+\openout2 = `riemannsymmetry.aux'.
+
+ (./riemannsymmetry.tex
+Overfull \hbox (0.43787pt too wide) in paragraph at lines 1--1
+[]\OT1/cmr/bx/n/17.28 Deriving the Rie-mann Sym-me-try Re-la-tions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--17
+
+ []
+
+) [4
+
+
+] (./main.aux (./abstract.aux) (./input.aux) (./riemannsymmetry.aux)) ) 
 Here is how much of TeX's memory you used:
- 238 strings out of 494502
- 2598 string characters out of 6167056
+ 254 strings out of 494502
+ 2836 string characters out of 6167056
  49574 words of memory out of 5000000
- 3590 multiletter control sequences out of 15000+600000
- 8194 words of font info for 29 fonts, out of 8000000 for 9000
+ 3593 multiletter control sequences out of 15000+600000
+ 8501 words of font info for 30 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  22i,6n,19p,900b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (2 pages, 1860 bytes).
+Output written on main.dvi (4 pages, 3436 bytes).
